@@ -1,0 +1,106 @@
+// Font Stacks
+
+//$font-url : 'https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i|Playfair+Display:700';
+
+@mixin do-font-face($name, $file-name, $url, $type, $weight, $style){
+  @font-face {
+    font-family: $name;
+    //src: url(#{$url + $file-name}.eot);
+    //src: url(#{$url + $file-name}.eot?#iefix) format('embedded-opentype');
+    @if $type == "otf"{
+      src: url(#{$url + $file-name}.otf) format('opentype');
+    }
+    @if $type == "ttf"{
+      src: url(#{$url + $file-name}.ttf) format('truetype');
+    }
+    @if $type == "woff"{
+      src: url(#{$url + $file-name}.woff);
+    }
+    @if $type == "woff2"{
+      src: url(#{$url + $file-name}.woff2);
+    }
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+
+
+@include do-font-face('Karla regular', 'Karla-Regular', '../fonts/', 'ttf', normal, normal);
+
+@include do-font-face('Karla bold', 'Karla-Bold', '../fonts/', 'ttf', bold, normal);
+@include do-font-face('Karla boldItalic', 'Karla-BoldItalic', '../fonts/', 'ttf', bold, italic);
+@include do-font-face('Karla Italic', 'Karla-Italic', '../fonts/', 'ttf', normal, italic);
+@include do-font-face('PlayfairDisplay Bold', 'PlayfairDisplay-Bold', '../fonts/', 'ttf', bold, normal);
+@include do-font-face('MoskExtra', 'Mosk Extra-Bold 800', '../fonts/', 'ttf', 800, normal);
+@include do-font-face('Oswald-regular', 'Oswald-Regular', '../fonts/', 'ttf', normal, normal);
+@include do-font-face('Richie Brusher', 'Richie-Brusher', '../fonts/', 'ttf', normal, normal);
+
+
+
+
+
+
+
+$karlaregula        : 'Karla regular', sans-serif;
+$karlabold         : 'Karla bold', sans-serif;
+$karlaboldI           : 'Karla boldItalic', sans-serif;
+$Playfairdisplay      : 'PlayfairDisplay Bold', sans-serif;
+$moskextra      : 'MoskExtra', sans-serif;
+$oswald      : 'Oswald-regular', sans-serif;
+$richie      : 'richie Brusher', sans-serif;
+$karlaI      : 'Karla Italic', sans-serif;
+
+
+
+$krs            : $karlaregula;
+
+
+// @font-face {
+//   font-family: $firasans;
+//   src: url('../fonts/') format('truetype');
+// }
+
+$normal         : normal;
+$medium         : medium;
+$bold           : bold;
+$bold800        : 800;
+$italic         : italic;
+$light          : 100;
+
+
+// Colors
+
+$dark-green  : #0f6b2d;
+
+$mid-green   : #00a651;
+
+$dim-grey    : #565656;
+
+$black       : #070606;
+$dark-black  : #000000;
+
+$mid-green2  :  #10d869;
+$light-green   : #54e691;
+$background-grey : #fafafa;
+$light-grey  : #e7ebec;
+$white-smoke : #fbfbfb;
+
+$user-icon-bg : #545f80;
+$pink         : #ff0088;
+$red-line     :  #dd1725;
+
+
+
+
+
+$dark-grey   : #909090;
+$mid-grey    : #C4C4C4;
+
+
+
+
+$border-color : #DDDDDD;
+$footer-bg    : #2D2D2D;
+
+

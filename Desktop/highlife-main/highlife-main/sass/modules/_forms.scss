@@ -1,0 +1,27 @@
+form {
+  //SUBSCRIBE
+  &.subscribe {
+    margin-top: 2rem;
+   
+    .form-control {
+      padding: 2.5rem;
+      @include media(desktop) {
+        padding: 2rem;
+       }
+     
+    }
+ 
+    .input-group-text {
+      background-color: #333333;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 1rem;
+      padding: 0 3rem;
+      cursor: pointer;
+     
+    }
+  }
+
+ 
+  
+}
